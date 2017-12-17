@@ -23,7 +23,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-
 /**
  * 我的fragment
  */
@@ -83,9 +82,11 @@ public class Mine04_Fragment extends Fragment {
         super.onResume();
         String uid = config.getString("uid", null);
         if(uid == null){
-            //wodeTouxiang.setImageResource(R.drawable.default_head);
+            //没登录
+            wodeTouxiang.setImageResource(R.drawable.default_head);
             denglu.setText("未登录");
         }else{
+            //已登录
             wodeTouxiang.setImageResource(R.drawable.ath);//头像改变
             denglu.setText("18631090582");               //头像下面的文字改变
         }
@@ -124,7 +125,7 @@ public class Mine04_Fragment extends Fragment {
 
                     //跳到设置页面
                     Intent intent = new Intent(getActivity(), SettingActivity.class);
-                    intent.putExtra("username", denglu.getText().toString());
+                    intent.putExtra("mobile", denglu.getText().toString());
                     startActivity(intent);
                 }
 

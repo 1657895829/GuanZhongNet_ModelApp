@@ -7,15 +7,19 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 import com.app.homework.MainActivity;
 import com.app.homework.R;
 import com.app.homework.util.ActivityManager;
 import java.io.File;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 //设置页面
 public class SettingActivity extends AppCompatActivity {
+    @BindView(R.id.mobile)
+    TextView mobile;
     private SharedPreferences config;
     private SharedPreferences.Editor edit;
 
@@ -30,9 +34,10 @@ public class SettingActivity extends AppCompatActivity {
         //将当前的Activity添加到ActivityManager中
         ActivityManager.getInstance().add(this);
 
-        //接收传值,设置头像和用户名
+        //接收传值,设置手机号
         Intent intent = getIntent();
-        String mobile = intent.getStringExtra("username");
+        String tel = intent.getStringExtra("username");
+        //mobile.setText(tel);
 
         ButterKnife.bind(this);
     }
@@ -45,10 +50,10 @@ public class SettingActivity extends AppCompatActivity {
                 break;
             case R.id.outLogin: //退出登录
 
-                logout(view);
+                //logout(view);
 
                 //将uid存值为null
-                edit.putString("uid",null).commit();
+                edit.putString("uid", null).commit();
 
                 finish();
                 break;
@@ -56,8 +61,8 @@ public class SettingActivity extends AppCompatActivity {
     }
 
 
-    //"退出登录"button的回调方法
-    public void logout(View view){
+    //"退出登录"button的回调方法,退出回到主页面，不是 我的fragment
+    public void logout(View view) {
         //1、将保存在sp中的数据删除
         SharedPreferences sp = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
         sp.edit().clear().commit();//清除数据必须要提交:提交以后，文件仍存在，只是文件中的数据被清除了
@@ -74,25 +79,26 @@ public class SettingActivity extends AppCompatActivity {
         //3、销毁所有的Activity
         this.removeAll();
         //4、重新进入首页面
-        goToActivity(MainActivity.class,null);
+        goToActivity(MainActivity.class, null);
     }
 
     //启动新的Activity
-    public void goToActivity(Class Activity,Bundle bundle){
-        Intent intent = new Intent(this,Activity);
-        if (bundle!=null&&bundle.size()!=0){
-            intent.putExtra("data",bundle);
+    public void goToActivity(Class Activity, Bundle bundle) {
+        Intent intent = new Intent(this, Activity);
+        if (bundle != null && bundle.size() != 0) {
+            intent.putExtra("data", bundle);
         }
         startActivity(intent);
     }
 
     //销毁当前的Activity
-    public void removeCurrentActivity(){
+    public void removeCurrentActivity() {
         ActivityManager.getInstance().removeCurrent();
     }
 
     //销毁所有的Activity
-    public void removeAll(){
+    public void removeAll() {
         ActivityManager.getInstance().removeAll();
     }
+
 }
