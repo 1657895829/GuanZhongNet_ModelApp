@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    app:tabGravity=”fill”和app:tabMode=”fixed”：
+        在标签较少的时候，这两个属性同时使用，得到居中显示效果。    -->
+
+    <android.support.design.widget.TabLayout
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="1dp"
+        android:layout_height="50dp"
+        app:tabIndicatorColor="#ff662b"
+        android:id="@+id/left_tabLayout"
+        app:tabSelectedTextColor="#ff662b"
+        android:layout_width="match_parent"
+        app:tabBackground="@drawable/tablayout_background"
+        ></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_weight="11"
+        android:layout_height="0dp"
+        android:id="@+id/viewPager01"
+        android:layout_width="match_parent" ></android.support.v4.view.ViewPager>
+
+    <android.support.v4.view.ViewPager
+        android:visibility="gone"
+        android:layout_weight="11"
+        android:layout_height="0dp"
+        android:id="@+id/xiaoren_weidenglu"
+        android:layout_width="match_parent"
+        ></android.support.v4.view.ViewPager>
+</LinearLayout>

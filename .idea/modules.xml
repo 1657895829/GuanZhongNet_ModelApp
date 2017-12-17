@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GuanZhongNet/GuanZhongNet.iml" filepath="$PROJECT_DIR$/GuanZhongNet/GuanZhongNet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWork_ModelApp.iml" filepath="$PROJECT_DIR$/HomeWork_ModelApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libzxing/libzxing.iml" filepath="$PROJECT_DIR$/libzxing/libzxing.iml" />
+    </modules>
+  </component>
+</project>

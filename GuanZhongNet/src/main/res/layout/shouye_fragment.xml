@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="#FFB516">
+
+                <TextView
+                    android:text="全国"
+                    android:textSize="18sp"
+                    android:id="@+id/country"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"></TextView>
+
+                    <TextView
+                        android:text="观众网"
+                        android:textSize="18sp"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:layout_centerHorizontal="true" ></TextView>
+
+                <ImageView
+                    android:src="@mipmap/a_5"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            app:tabBackground="@drawable/tablayout_background"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            android:layout_width="match_parent"
+            app:tabSelectedTextColor="#ff662b"
+            app:tabIndicatorColor="#ff662b"
+            app:tabIndicatorHeight="1dp"
+            android:layout_height="60dp"
+            android:id="@+id/tabLayout"
+            app:tabTextColor="#000000"
+            app:tabMode="scrollable">
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

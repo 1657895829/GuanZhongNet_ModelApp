@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="218dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:id="@+id/faHuoDong"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:background="@drawable/wodetouxiang_shape"
+                fresco:backgroundImage="@drawable/star_good"
+                android:layout_marginLeft="98dp"
+                fresco:roundAsCircle="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+            <TextView
+                android:text="发活动"
+                android:textSize="13sp"
+                android:textColor="#383535"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="118dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:background="@drawable/wodetouxiang_shape"
+                fresco:backgroundImage="@drawable/star_bad"
+                android:layout_marginLeft="50dp"
+                fresco:roundAsCircle="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+            <TextView
+                android:text="敬请期待"
+                android:textSize="13sp"
+                android:textColor="#383535"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"   />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cha"
+        android:layout_marginBottom="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/poplayer_close_btn">
+    </RelativeLayout>
+
+</RelativeLayout>

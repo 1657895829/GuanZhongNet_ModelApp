@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/cha"
+        android:layout_height="168dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/guide2"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:src="@mipmap/cha"
+            android:id="@+id/back_cha"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"   />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/r"
+        android:padding="6dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/cha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:textSize="16sp"
+            android:text="活动开始时间"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="详细地址"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="活动消息描述"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="活动标签"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="报名费用"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="包名设置"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="同意并接受"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/huo_rg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <RadioButton
+            android:text="预览"
+            android:checked="true"
+            android:textSize="21sp"
+            android:id="@+id/huo_yl"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/ButtonStyle"
+            android:textColor="@color/color"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:text="发布"
+            android:textSize="21sp"
+            android:id="@+id/huo_fb"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            style="@style/ButtonStyle"
+            android:textColor="@color/color"
+            android:layout_height="wrap_content"
+            />
+    </RadioGroup>
+
+</RelativeLayout>

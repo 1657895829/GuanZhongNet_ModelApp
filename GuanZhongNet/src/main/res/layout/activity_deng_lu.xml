@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/denglu_cha"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_arrow_black"  />
+
+    </RelativeLayout>
+
+    <TextView
+        android:background="@drawable/guanzhong_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/l"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_marginTop="21dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:hint="  请输入手机号"
+                android:id="@+id/denglu_zh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="21dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:hint="  请输入密码"
+                android:id="@+id/denglu_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="登录"
+            android:id="@+id/denglu_btn"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:background="#eeeeee"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/zhuce"
+                android:textSize="15sp"
+                android:text="注册账号"
+                android:textColor="#ff6102"
+                android:layout_marginLeft="145dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+            <TextView
+                android:textSize="15sp"
+                android:text="忘记密码"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:text="使用社交账号登录"
+                android:layout_marginBottom="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp">
+        <ImageView
+            android:src="@mipmap/weixin"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            />
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="88dp"
+            android:src="@mipmap/qq"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            />
+        <ImageView
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/weibo"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+
