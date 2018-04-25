@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">作业-观众网：RxJava+Retrofit+OkHttp+Fresco+EventBus+高德地图城市选择+BottomTabBar+ImageLoader+XRecyclerView+RecyclerView+TabLayout+ViewPager+Glide+SharedPerferences</string>
+    <string name="app_name">观众网：RxJava+Retrofit+OkHttp+Fresco+EventBus+高德地图城市选择+BottomTabBar+ImageLoader+XRecyclerView+RecyclerView+TabLayout+ViewPager+Glide+SharedPerferences</string>
 
 
 </resources>
